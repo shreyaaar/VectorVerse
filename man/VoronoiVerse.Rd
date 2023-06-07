@@ -2,7 +2,7 @@
 % Please edit documentation in R/VoronoiVerse.R
 \name{VoronoiVerse}
 \alias{VoronoiVerse}
-\title{VoronoiVerse Function}
+\title{Generates a Voronoi diagram with random seed points.}
 \usage{
 VoronoiVerse(
   numPoints = 100,
@@ -40,7 +40,7 @@ None (plot is displayed).
 Generates a Voronoi diagram with random seed points.
 }
 \examples{
-# Generate a Voronoi diagram with default parameters
+# Generate a Voronoi diagram with defalt parameters
 VoronoiVerse(100, 20, 0, 10, 0, 10)
 
 # Generate a Voronoi diagram with a custom color palette
