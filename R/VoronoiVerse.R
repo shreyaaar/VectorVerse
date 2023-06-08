@@ -27,7 +27,9 @@
 #' @export
 VoronoiVerse <- function(numPoints = 100, numSeeds = 20,
                          minX = 0, maxX = 10, minY = 0, maxY = 10,
-                         palette = rainbow(numSeeds), ...) {
+                         #palette = rainbow(numSeeds)
+                         ...) {
+
   # Generate random seed points
   seedX <- runif(numSeeds, minX, maxX)
   seedY <- runif(numSeeds, minY, maxY)
@@ -48,6 +50,13 @@ VoronoiVerse <- function(numPoints = 100, numSeeds = 20,
     }
   }
 
+  #asks if user wants to add their own custom colors
+
   # Plot the Voronoi diagram
-  image(gridX, gridY, voronoiMatrix, col = palette, xaxt = "n", yaxt = "n", xlab = "", ylab = "", main = "", ...)
+  image(gridX, gridY, voronoiMatrix, col = select_colors(), xaxt = "n", yaxt = "n", xlab = "", ylab = "", main = "", ...)
 }
+
+
+
+
+
